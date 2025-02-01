@@ -3,7 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbopack",
+		"dev": "next dev",
+		"dev:turbo": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
 		"lint": "eslint --cache",
@@ -16,6 +17,7 @@
 		]
 	},
 	"dependencies": {
+		"@clerk/nextjs": "^6.10.6",
 		"@emotion/cache": "^11.14.0",
 		"@emotion/react": "^11.14.0",
 		"@emotion/styled": "^11.14.0",
@@ -50,7 +52,7 @@
 		"eslint": "9.19.0",
 		"eslint-import-resolver-alias": "^1.1.2",
 		"eslint-import-resolver-typescript": "^3.7.0",
-		"eslint-plugin-check-file": "2.8.0",
+		"eslint-plugin-check-file": "3.0.0",
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-module-bindings-newline": "^1.0.1",
 		"eslint-plugin-project-structure": "^3.13.2",

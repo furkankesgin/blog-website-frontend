@@ -3,8 +3,8 @@ import { Metadata } from "next";
 
 const DefaultMetadata: Metadata = {
 	title: {
-		default: "Codehosue",
-		template: "%s | Codehosue"
+		default: "F-BLog",
+		template: "%s | F-BLog"
 	},
 	description: "Outsource solutions",
 	robots: { index: true, follow: true },
@@ -17,16 +17,16 @@ const DefaultMetadata: Metadata = {
 	// manifest: `/site.webmanifest`,
 	openGraph: {
 		// url: SITE_CONFIG.url,
-		title: "Codehosue",
+		title: "F-BLog",
 		description: "Outsource solutions",
-		siteName: "Codehosue",
+		siteName: "F-BLog",
 		//   images: [`${SITE_CONFIG.url}/images/og.jpg`],
 		type: "website",
 		locale: "en_US"
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Codehosue",
+		title: "F-BLog",
 		description: "Outsource solutions"
 		//   images: [`${SITE_CONFIG.url}/images/og.jpg`],
 	},

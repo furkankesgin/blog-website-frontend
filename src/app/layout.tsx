@@ -7,6 +7,8 @@ import React from "react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
+import { ClerkProvider } from "@clerk/nextjs";
+
 import AppMetadata from "@/data/const/app-metadata";
 import THEME from "@/theme/theme";
 
@@ -27,17 +29,19 @@ export const metadata: Metadata = AppMetadata.DefaultMetadata;
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<html lang="en">
-			<body className={roboto.variable}>
-				<AppRouterCacheProvider>
-					<ThemeProvider theme={THEME}>
-						<CssBaseline />
+		<ClerkProvider>
+			<html lang="en" style={{ height: "100%", width: "100%" }}>
+				<body className={roboto.variable} style={{ height: "100%", width: "100%" }}>
+					<AppRouterCacheProvider>
+						<ThemeProvider theme={THEME}>
+							<CssBaseline />
 
-						{children}
-					</ThemeProvider>
-				</AppRouterCacheProvider>
-			</body>
-		</html>
+							{children}
+						</ThemeProvider>
+					</AppRouterCacheProvider>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 };
 
