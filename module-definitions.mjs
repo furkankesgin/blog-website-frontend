@@ -25,7 +25,9 @@ export const ModuleConfig = createIndependentModules({
 
 				"src/hooks/**",
 				"src/data/**",
-				"src/service/**"
+				"src/services/**",
+				"src/config/**",
+				"src/theme/**"
 			]
 		},
 		{
@@ -41,7 +43,8 @@ export const ModuleConfig = createIndependentModules({
 
 				"src/hooks/**",
 				"src/data/**",
-				"src/service/**",
+				"src/services/**",
+				"src/config/**",
 				"src/theme/**",
 
 				"{family_3}/**"

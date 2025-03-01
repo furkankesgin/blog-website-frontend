@@ -9,6 +9,8 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 import { ClerkProvider } from "@clerk/nextjs";
 
+import AxiosContext from "@/components/context/axios/axios-context";
+import InitUser from "@/components/context/init-user";
 import AppMetadata from "@/data/const/app-metadata";
 import THEME from "@/theme/theme";
 
@@ -30,17 +32,21 @@ export const metadata: Metadata = AppMetadata.DefaultMetadata;
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<ClerkProvider>
-			<html lang="en" style={{ height: "100%", width: "100%" }}>
-				<body className={roboto.variable} style={{ height: "100%", width: "100%" }}>
-					<AppRouterCacheProvider>
-						<ThemeProvider theme={THEME}>
-							<CssBaseline />
+			<AxiosContext>
+				<InitUser>
+					<html lang="en" style={{ height: "100%", width: "100%" }}>
+						<body className={roboto.variable} style={{ height: "100%", width: "100%" }}>
+							<AppRouterCacheProvider>
+								<ThemeProvider theme={THEME}>
+									<CssBaseline />
 
-							{children}
-						</ThemeProvider>
-					</AppRouterCacheProvider>
-				</body>
-			</html>
+									{children}
+								</ThemeProvider>
+							</AppRouterCacheProvider>
+						</body>
+					</html>
+				</InitUser>
+			</AxiosContext>
 		</ClerkProvider>
 	);
 };
