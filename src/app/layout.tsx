@@ -31,11 +31,11 @@ export const metadata: Metadata = AppMetadata.DefaultMetadata;
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<ClerkProvider>
-			<AxiosContext>
-				<InitUser>
-					<html lang="en" style={{ height: "100%", width: "100%" }}>
-						<body className={roboto.variable} style={{ height: "100%", width: "100%" }}>
+		<html lang="en" style={{ height: "100%", width: "100%" }}>
+			<body className={roboto.variable} style={{ height: "100%", width: "100%" }}>
+				<ClerkProvider>
+					<AxiosContext>
+						<InitUser>
 							<AppRouterCacheProvider>
 								<ThemeProvider theme={THEME}>
 									<CssBaseline />
@@ -43,11 +43,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 									{children}
 								</ThemeProvider>
 							</AppRouterCacheProvider>
-						</body>
-					</html>
-				</InitUser>
-			</AxiosContext>
-		</ClerkProvider>
+						</InitUser>
+					</AxiosContext>
+				</ClerkProvider>
+			</body>
+		</html>
 	);
 };
 

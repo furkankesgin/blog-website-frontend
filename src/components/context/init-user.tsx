@@ -30,9 +30,9 @@ const InitUser = async (props: Props) => {
 				}
 			}
 		}
-
-		return props.children;
 	}
+
+	return props.children;
 };
 
 export default InitUser;
